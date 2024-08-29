@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Callback Script V2</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="shortcut icon" type="image/png" href="./favicon.ico">
+</head>
+<body>
+    <h3 align = "center">Callback Script Simulator V2</h3>
+    <div id="mainDiv" class="formDiv">
+            <div class="__fields">
+                <form id="callbackrequest">
+                    <div id="callbackUrlDiv" class="component">
+                        <label for ="callback url">Callback URL: </label>
+                        <input type="text" id="url" name="url" placeholder="example: https://shop/callback">
+                    </div>
+                    <div id="accessKey" class="component">
+                        <label for ="accessKey">Vendor ID: </label>
+                        <select name="accessKeyVal" id="accessKeyVal">
+                            <option value="a87ff679a2f3e71d9181a67b7542122c">Vendor 4</option>
+                            <option value="19ca14e7ea6328a42e0eb13d585e4c22">Vendor 36</option>
+                        </select>
+                    </div>
+                    <div id="events" class="component">
+                        <div id="eventdropdown">
+                            <label for ="eventDropdown">Event type: </label>
+                            <select id="eventType" name="eventType">
+                            <option value="">Select an Event</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="paymentTypeDiv" class="component"></div>
+                    <div id="tidDiv" class="component">
+                        <label for ="tid">TID: </label>
+                        <input type="text" id="tid" name="tid">
+                    </div>
+                    <div id="resultStatusDiv" class="component"></div>
+                    <div id="transactionStatusDiv" class="component"></div>
+                    <div id="instalmentCancelTypeDiv" class="component"></div>
+                    <div id="amountDiv" class="component"></div>
+                    <div id="updateDiv" class="component"></div>
+                    <div id="instalmentDiv" class="component"></div>
+                    <div id="subscriptionDiv" class="component"></div>
+                    <div id="submitBtn" class="component">
+                        <input type="submit" id="sendReq" value="Get" onclick="submitForm(event)">
+                    </div>
+                    <div id="error" class="component">
+                    <small></small>
+                    </div>
+                    <div id="callbackEventList" class="component">
+                        <a href="https://docs.google.com/spreadsheets/d/1R7sfViPpilk60ktSc3Zn0xGmz1zv0g8Tz9ioRsGzOiE/" target="_blank">Payments and their event types</a>
+                    </div>
+
+                </form>
+            </div>
+       
+       <div id="responseDiv">
+            <div id="response" ></div>
+            <div id="jsonValues" >
+                <textarea id="callbackRequestJson" rows="50" cols="90" placeholder='example: {"event": {"checksum"..........}'></textarea>
+            </div>
+            <button id="reRunBtn">Send</button>
+            <button id="jsonFormatBtn">Format JSON</button>
+       </div>
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
